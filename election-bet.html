@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Page | Singapore Scammers</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Submit your betting confirmation and PayNow invoice. Secure and fast submission.">
+  <meta name="keywords" content="GE2025, bet confirmation, Singapore scammers, PayNow, grc, party">
+  <meta name="author" content="Singapore Authentic Scam Review">
+  <link rel="canonical" href="https://singaporescammer.github.io/sgalert/payment-page.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+      padding: 10px;
+    }
+    .form-container {
+      width: 100%;
+      max-width: 750px;
+      background: #111;
+      padding: 25px 20px;
+      border-radius: 10px;
+      border: 2px solid red;
+      box-shadow: 0 0 15px rgba(255,0,0,0.7);
+    }
+    h1 {
+      font-size: 26px;
+      color: red;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px red;
+      text-transform: uppercase;
+    }
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+      background: #222;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    th {
+      background: #550000;
+      color: #ff4d4d;
+    }
+    td {
+      font-size: 14px;
+    }
+    .highlight {
+      color: lime;
+      font-weight: bold;
+    }
+    img.paynow {
+      width: 100%;
+      max-width: 260px;
+      margin: 15px auto;
+      border-radius: 8px;
+      display: block;
+    }
+    .download-btn {
+      background: red;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      margin: 15px 0;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      background: #ff3333;
+      box-shadow: 0 0 8px red;
+    }
+    .payment-info p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      background: red;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .submit-btn:hover {
+      background: #ff3333;
+      box-shadow: 0 0 10px red;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+<div class="form-container">
+  <h1>Payment Page</h1>
+
+  <form action="https://formsubmit.co/report@singaporescammers.com" method="POST">
+    <table>
+      <tr><th>Description</th><th>Details</th></tr>
+      <tr><td>Alias Name</td><td id="aliasName">Loading...</td></tr>
+      <tr><td>Email Address</td><td id="email">Loading...</td></tr>
+      <tr><td>Contact Number</td><td id="contactNumber">Loading...</td></tr>
+      <tr><td>Selected GRC</td><td id="selectedGRC">Loading...</td></tr>
+      <tr><td>Selected Party</td><td id="selectedParty">Loading...</td></tr>
+      <tr><td>Total Bet Amount</td><td class="highlight">$<span id="totalPrice">0.00</span></td></tr>
+    </table>
+
+    <h2 style="color:red; margin-bottom:10px;">PayNow QR Code</h2>
+    <img id="qrCode" src="https://singaporescammer.github.io/sgalert/PaynowQRCode.png" alt="PayNow QR" class="paynow">
+    <a href="https://singaporescammer.github.io/sgalert/PaynowQRCode.png" download="PayNow_QR_SingaporeScammer.png" class="download-btn">Save QR to Gallery</a>
+
+    <div class="payment-info">
+      <p><strong>Payee Name:</strong> Sing X Savor</p>
+      <p><strong>Bank Name:</strong> DBS BANK</p>
+      <p><strong>Acc Num:</strong> 88532600023000852</p>
+    </div>
+
+    <input type="hidden" name="_redirect" value="https://singaporescammer.github.io/sgalert/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="Alias Name" id="inputAliasName">
+    <input type="hidden" name="Email Address" id="inputEmail">
+    <input type="hidden" name="Contact Number" id="inputContactNumber">
+    <input type="hidden" name="Selected GRC" id="inputSelectedGRC">
+    <input type="hidden" name="Selected Party" id="inputSelectedParty">
+    <input type="hidden" name="Total Bet Amount" id="inputPrice">
+
+    <button type="submit" class="submit-btn">Submit Receipt</button>
+  </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const params = new URLSearchParams(window.location.search);
+  const aliasName = params.get("name") || "Not provided";
+  const email = params.get("email") || "Not provided";
+  const contactNumber = params.get("contact") || "Not provided";
+  const selectedGRC = params.get("grc") || "Not selected";
+  const selectedParty = params.get("party") || "Not selected";
+  const price = params.get("amount") || "0.00";
+
+  document.getElementById("aliasName").textContent = aliasName;
+  document.getElementById("email").textContent = email;
+  document.getElementById("contactNumber").textContent = contactNumber;
+  document.getElementById("selectedGRC").textContent = selectedGRC;
+  document.getElementById("selectedParty").textContent = selectedParty;
+  document.getElementById("totalPrice").textContent = price;
+
+  document.getElementById("inputAliasName").value = aliasName;
+  document.getElementById("inputEmail").value = email;
+  document.getElementById("inputContactNumber").value = contactNumber;
+  document.getElementById("inputSelectedGRC").value = selectedGRC;
+  document.getElementById("inputSelectedParty").value = selectedParty;
+  document.getElementById("inputPrice").value = price;
+});
+</script>
+</body>
+</html>

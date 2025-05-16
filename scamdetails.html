@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Subscription - User Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevents page-level scrolling */
+    padding-top: 5px; /* Ensures the top border is visible */
+    padding-bottom: 5px; /* Ensures the bottom border is visible */
+}
+
+/* Full-Screen Form Container */
+.form-container {
+    width: 100%;
+    max-width: 750px;
+    height: 96vh; /* Slightly reduced to ensure bottom visibility */
+    background: rgba(20, 20, 20, 0.98);
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgba(255, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures form content is scrollable inside */
+    margin-top: 5px; /* Small margin to always show the top border */
+    margin-bottom: 5px; /* Ensures the bottom border is visible */
+}
+
+/* Scrollable Content */
+.form-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Enables scrolling inside the form */
+    padding-right: 5px; /* Prevents scrollbar overlap */
+    padding-bottom: 15px; /* Ensures bottom content is not cut off */
+}
+
+/* Title Styling */
+h1 {
+    font-size: 24px;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5px; /* Spacing from the top */
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    background: rgba(30, 30, 30, 0.9);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus, textarea:focus {
+    border-color: #ff3333;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Styled Dropdown */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Dropdown Box */
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    background: rgba(30, 30, 30, 0.9); /* Dark dropdown */
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Add custom dropdown arrow */
+.select-wrapper::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Dropdown focus effect */
+.select-wrapper select:focus {
+    border-color: #ff3333;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Dropdown Option Styling */
+.select-wrapper select option {
+    background: rgba(30, 30, 30, 0.9) !important; /* Fully dark background */
+    color: #fff !important;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Dropdown Menu Styling */
+select::-webkit-dropdown-list,
+select option {
+    background: rgba(30, 30, 30, 0.9) !important; /* Ensure dark background */
+    color: #fff !important;
+    font-size: 14px;
+}
+
+/* Force Dark Popup Menu */
+select::-webkit-select-placeholder {
+    background: rgba(30, 30, 30, 0.9) !important;
+    color: #fff !important;
+}
+
+/* Price Display */
+.price-display {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ff00;
+    margin-top: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Styling only the numeric amount */
+.price-display span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #ff4444;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 90%;
+        height: 96vh;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .select-wrapper select {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        max-width: 95%;
+        height: 96vh;
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .select-wrapper select {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>VIP SUBSCRIPTION FORM</h1>
+    <div class="form-content">
+        <form id="vipForm">
+            
+            <label for="aliasName">Alias Name:</label>
+            <input type="text" id="aliasName" name="aliasName" required>
+
+            <label for="telegramID">Telegram ID:</label>
+            <input type="text" id="telegramID" name="telegramID">
+
+            <label for="telegramUsername">Telegram Username (Required for communication):</label>
+            <input type="text" id="telegramUsername" name="telegramUsername" required>
+
+            <label for="whatsapp">WhatsApp Number:</label>
+            <input type="tel" id="whatsapp" name="whatsapp">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Nationality Dropdown -->
+            <label for="nationality">Nationality:</label>
+            <div class="select-wrapper">
+                <select id="nationality" name="nationality" required>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Business Type Dropdown -->
+            <label for="businessType">Type of Business:</label>
+            <div class="select-wrapper">
+                <select id="businessType" name="businessType" required>
+                    <option value="Retail">Retail</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Service-based">Service-based</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Subscription Feature Dropdown -->
+            <label for="feature">Which feature made you subscribe?</label>
+            <div class="select-wrapper">
+                <select id="feature" name="feature" required>
+                    <option value="Advertise">Advertise your business</option>
+                    <option value="Protection">Protection from false accusations</option>
+                    <option value="Tools">Gain access to our armoury and tools</option>
+                    <option value="Voice">Make your voice heard</option>
+                </select>
+            </div>
+
+            <!-- Welcome Gift Dropdown -->
+            <label for="gift">Select Your Welcome Gift:</label>
+            <div class="select-wrapper">
+                <select id="gift" name="gift" required>
+                    <option value="3 Months Telegram Premium">3 Months Telegram Premium</option>
+                    <option value="5000 Telegram Group Members">5000 Telegram Group Members</option>
+                    <option value="Autoforward Platinum Tier">Autoforward Platinum Tier Subscription</option>
+                </select>
+            </div>
+
+            <!-- Special Request Textarea -->
+            <label for="request">Special Request or How We Can Help You? (500 characters max):</label>
+            <textarea id="request" name="request" maxlength="500"></textarea>
+
+            <!-- Subscription Plan Dropdown -->
+            <label for="plan">Subscription Plan:</label>
+            <div class="select-wrapper">
+                <select id="plan" name="plan" required>
+                    <option value="Monthly" data-price="50">Monthly - $50</option>
+                    <option value="Quarterly" data-price="300">Quarterly - $300</option>
+                    <option value="Annual" data-price="600">Annual - $600</option>
+                </select>
+            </div>
+
+            <!-- Price Display -->
+            <div class="price-display">Total: <span id="totalPrice">$50</span></div>
+
+            <!-- Terms & Conditions Checkbox -->
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms & Conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Proceed to Payment</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("plan").addEventListener("change", function() {
+        const selectedOption = this.options[this.selectedIndex];
+        document.getElementById("totalPrice").textContent = selectedOption.getAttribute("data-price");
+    });
+
+    document.getElementById("vipForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        let queryString = "?";
+        for (let [key, value] of formData.entries()) {
+            queryString += `${encodeURIComponent(key)}=${encodeURIComponent(value)}&`;
+        }
+
+        const selectedPlan = document.getElementById("plan");
+        const selectedPrice = selectedPlan.options[selectedPlan.selectedIndex].getAttribute("data-price");
+        queryString += `price=${selectedPrice}`;
+
+        window.location.href = "https://www.singaporescammer.site/vipinvoice.html" + queryString;
+    });
+</script>
+
+</body>
+</html>

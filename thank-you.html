@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Singapore Scammers</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Thank you for your submission. SingaporeScammers.com team will review and process your VIP subscription shortly.">
+  <meta name="keywords" content="thank you, VIP subscription, Singapore scammers, submission success, payment confirmation">
+  <meta name="author" content="Singapore Authentic Scam Review">
+  <link rel="canonical" href="https://singaporescammer.github.io/sgalert/thank-you.html" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+    body {
+      min-height: 100vh;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+    .container {
+      background-color: #111;
+      border: 2px solid red;
+      padding: 40px 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(255,0,0,0.7);
+      animation: fadeIn 1s ease-in-out;
+      z-index: 1;
+      position: relative;
+    }
+    h1 {
+      font-size: 28px;
+      color: #ff3333;
+      text-shadow: 0 0 10px red;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 16px;
+      color: #ccc;
+      margin: 15px 0;
+    }
+    .highlight {
+      color: lime;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: red;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #ff3333;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px red;
+    }
+    .checkmark {
+      font-size: 70px;
+      color: lime;
+      margin-bottom: 20px;
+      animation: pop 0.6s ease;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pop {
+      0% {transform: scale(0.5);}
+      100% {transform: scale(1);}
+    }
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      top: -10px;
+      animation: confettiFall 4s infinite ease-in;
+      z-index: 0;
+    }
+    @keyframes confettiFall {
+      0% {transform: translateY(0) rotate(0);}
+      100% {transform: translateY(100vh) rotate(360deg);}
+    }
+    /* Pop-up */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background: #1a1a1a;
+      padding: 20px 30px;
+      border: 2px solid #ff3333;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,50,50,0.8);
+      color: #fff;
+      font-size: 18px;
+      z-index: 9999;
+      animation: fadeIn 0.5s ease;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="checkmark">✔️</div>
+  <h1>Thank You!</h1>
+  <p>Your VIP Invoice has been <span class="highlight">successfully submitted</span>.</p>
+  <p>Our team will verify your details and activate your membership within <span class="highlight">24 hours</span>.</p>
+  <p>If urgent, contact us via <a href="https://t.me/Tinagoh221" style="color:#ff4d4d; text-decoration:underline;">Telegram Support</a>.</p>
+  <a href="https://singaporescammer.github.io/sgalert/" class="btn">Return to Homepage</a>
+</div>
+
+<div class="popup" id="popup">✅ Submission Received! Redirecting...</div>
+
+<footer>
+  © 2025 Singapore Authentic Scam Review | SingaporeScammers.com
+</footer>
+
+<!-- Scripts -->
+<script>
+// Auto-redirect after 8 seconds
+setTimeout(function(){
+  document.getElementById('popup').style.display = 'block';
+}, 4000);
+
+setTimeout(function(){
+  window.location.href = "https://singaporescammer.github.io/sgalert/";
+}, 8000);
+
+// Generate Confetti
+for (let i = 0; i < 40; i++) {
+  let confetti = document.createElement("div");
+  confetti.className = "confetti";
+  confetti.style.left = Math.random() * 100 + "vw";
+  confetti.style.backgroundColor = ["#ff0000", "#ff3333", "#ff6666", "#990000"][Math.floor(Math.random()*4)];
+  confetti.style.animationDuration = (Math.random()*3 + 2) + "s";
+  confetti.style.opacity = Math.random();
+  document.body.appendChild(confetti);
+}
+</script>
+
+</body>
+</html>

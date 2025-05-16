@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Your Bets – Which Party Do You Vote For?</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Vote for your preferred political party in the upcoming GE2025. Pick your GRC and cast your choice securely.">
+  <meta name="keywords" content="Singapore elections, GE2025, voting, political parties, GRC, SMC, vote">
+  <meta name="author" content="Singapore Election Tracker">
+  <link rel="canonical" href="https://singaporescammer.github.io/sgalert/ge2025.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Place Your Vote – GE2025 Singapore" />
+  <meta property="og:description" content="Support your party by placing a bet on your selected GRC. Who will win in 2025? Choose now." />
+  <meta property="og:url" content="https://singaporescammer.github.io/sgalert/ge2025.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://singaporescammer.github.io/sgalert/android-chrome-512x512.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vote Your Party – GE2025" />
+  <meta name="twitter:description" content="Singapore GE2025 voting platform. Select your party. Bet. Engage.">
+  <meta name="twitter:image" content="https://singaporescammer.github.io/sgalert/android-chrome-512x512.png" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff;
+      color: #212529;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 60px;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: linear-gradient(to right, #8B0000, #000);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .navbar-brand img {
+      height: 28px;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 10px;
+    }
+    .navbar-nav .nav-link:hover {
+      text-shadow: 0 0 6px #ff1a1a;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      text-decoration: underline;
+      color: #ffcc00 !important;
+    }
+    .selectable-card {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .selectable-card:hover {
+      border: 2px solid #28a745;
+    }
+    .selectable-card.border-success {
+      transform: scale(1.03);
+    }
+    #placeBetBtn {
+      background: linear-gradient(90deg, #28a745, #6f42c1);
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      box-shadow: 0 0 15px #6f42c1;
+      transition: 0.3s ease;
+      color: white;
+    }
+    #placeBetBtn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #6f42c1;
+    }
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://t.me/singaporescammerss">
+      <img src="https://singasavors.github.io/Logo/scamlogo.png" alt="Logo" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://singaporescammer.github.io/sgalert/topscammer.html">Top Scammer</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://singaporescammer.github.io/sgalert/discussion.html">Discussion Forum</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://singaporescammer.github.io/sgalert/vipsubscribe.html">VIP SUBSCRIBE</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://t.me/singaporescammerss">Telegram Channel</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://singaporescammer.github.io/sgalert/contact-us.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://singaporescammer.github.io/sgalert/report-scam.html">Report Scam</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Tampines GRC -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">Tampines GRC</h2>
+
+  <div class="row g-4 text-center">
+
+    <!-- PAP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Tampines', 'PAP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PAP.svg" alt="PAP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PAP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Masagos_Zulkifli_binMasagos_Mohamad.jpg" class="rounded-circle img-fluid" alt="Masagos Zulkifli">
+            <p>Masagos Zulkifli</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Koh_Poh_Koon.jpg" class="rounded-circle img-fluid" alt="Koh Poh Koon">
+            <p>Koh Poh Koon</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Baey_Yam_Keng.jpg" class="rounded-circle img-fluid" alt="Baey Yam Keng">
+            <p>Baey Yam Keng</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Charlene_Chen.jpg" class="rounded-circle img-fluid" alt="Charlene Chen">
+            <p>Charlene Chen</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/David_Neo.jpg" class="rounded-circle img-fluid" alt="David Neo">
+            <p>David Neo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Tampines', 'WP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/WP.svg" alt="WP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">WP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Muhamad_Faisal_Abdul_Manap.jpg" class="rounded-circle img-fluid" alt="Faisal Manap">
+            <p>Faisal Manap</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Jimmy_Tan.jpg" class="rounded-circle img-fluid" alt="Jimmy Tan">
+            <p>Jimmy Tan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Michael_Thng.jpg" class="rounded-circle img-fluid" alt="Michael Thng">
+            <p>Michael Thng</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Ong_Lue_Ping.jpg" class="rounded-circle img-fluid" alt="Ong Lue Ping">
+            <p>Ong Lue Ping</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Eileen_Chong.jpg" class="rounded-circle img-fluid" alt="Eileen Chong">
+            <p>Eileen Chong</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PPP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Tampines', 'PPP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PPP.svg" alt="PPP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PPP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Goh_Meng_Seng.jpg" class="rounded-circle img-fluid" alt="Goh Meng Seng">
+            <p>Goh Meng Seng</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Peter_Soh.jpg" class="rounded-circle img-fluid" alt="Peter Soh">
+            <p>Peter Soh</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Vere_Nathan_Sheng_Li.jpg" class="rounded-circle img-fluid" alt="Vere Nathan">
+            <p>Vere Nathan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Arbaah_Haroun.jpg" class="rounded-circle img-fluid" alt="Arbaah Haroun">
+            <p>Arbaah Haroun</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Derrick_Sim.jpg" class="rounded-circle img-fluid" alt="Derrick Sim">
+            <p>Derrick Sim</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NSP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Tampines', 'NSP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/NSP.svg" alt="NSP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">NSP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Fong_Chin_Leong.jpg" class="rounded-circle img-fluid" alt="Reno Fong">
+            <p>Reno Fong</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Ridzwan_Mohd.jpg" class="rounded-circle img-fluid" alt="Mohd Ridzwan">
+            <p>Mohd Ridzwan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Yeo_Ren_Yuan.jpg" class="rounded-circle img-fluid" alt="Eugene Yeo">
+            <p>Eugene Yeo</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Zee_Phay2.jpg" class="rounded-circle img-fluid" alt="Zee Phay">
+            <p>Zee Phay</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Thamilselvan_Karuppaya.jpg" class="rounded-circle img-fluid" alt="Thamilselvan Karuppaya">
+            <p>Thamilselvan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    
+
+<!-- Punggol GRC -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">Punggol GRC</h2>
+
+  <div class="row g-4 text-center">
+
+    <!-- PAP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Punggol', 'PAP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PAP.svg" alt="PAP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PAP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Gan_Kim_Yong.jpg" class="rounded-circle img-fluid" alt="Gan Kim Yong">
+            <p>Gan Kim Yong</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Janil_Puthucheary.jpg" class="rounded-circle img-fluid" alt="Janil Puthucheary">
+            <p>Janil Puthucheary</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Sun_Xueling.jpg" class="rounded-circle img-fluid" alt="Sun Xueling">
+            <p>Sun Xueling</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Yeo_Wan_Ling.jpg" class="rounded-circle img-fluid" alt="Yeo Wan Ling">
+            <p>Yeo Wan Ling</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Punggol', 'WP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/WP.svg" alt="WP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">WP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Harpreet_Singh.jpg" class="rounded-circle img-fluid" alt="Harpreet Singh Nehal">
+            <p>Harpreet Singh Nehal</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Jackson_Au.jpg" class="rounded-circle img-fluid" alt="Jackson Au">
+            <p>Jackson Au</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Alia_Mattar.jpg" class="rounded-circle img-fluid" alt="Siti Alia Abdul Rahim Mattar">
+            <p>Siti Alia Abdul Rahim Mattar</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Alexis_Dang.jpg" class="rounded-circle img-fluid" alt="Alexis Dang">
+            <p>Alexis Dang</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End Punggol GRC row -->
+</div> <!-- End Punggol GRC container -->
+
+<!-- East Coast GRC -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">East Coast GRC</h2>
+
+  <div class="row g-4 text-center">
+
+    <!-- PAP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('East Coast', 'PAP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PAP.svg" alt="PAP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PAP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Edwin_Tong.jpg" class="rounded-circle img-fluid" alt="Edwin Tong">
+            <p>Edwin Tong</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Tan_Kiat_How.jpg" class="rounded-circle img-fluid" alt="Tan Kiat How">
+            <p>Tan Kiat How</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Jessica_Tan.jpg" class="rounded-circle img-fluid" alt="Jessica Tan">
+            <p>Jessica Tan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Dinesh_Vasu_Dash.jpg" class="rounded-circle img-fluid" alt="Dinesh Vasu Dash">
+            <p>Dinesh Vasu Dash</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Hazlinda_Abdul_Halim.jpg" class="rounded-circle img-fluid" alt="Hazlina Abdul Halim">
+            <p>Hazlina Abdul Halim</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('East Coast', 'WP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/WP.svg" alt="WP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">WP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Yee_Jenn_Yong.jpg" class="rounded-circle img-fluid" alt="Yee Jenn Jong">
+            <p>Yee Jenn Jong</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Nathaniel_Koh_Kim_Kui_20.jpg" class="rounded-circle img-fluid" alt="Nathaniel Koh">
+            <p>Nathaniel Koh</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Paris_V_Parameswari.jpg" class="rounded-circle img-fluid" alt="Paris V. Parameswari">
+            <p>Paris V. Parameswari</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Sufyan_Mikhail_Putra.jpg" class="rounded-circle img-fluid" alt="Sufyan Mikhail Putra">
+            <p>Sufyan Mikhail Putra</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Jasper_Kuan.jpg" class="rounded-circle img-fluid" alt="Jasper Kuan">
+            <p>Jasper Kuan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End East Coast GRC row -->
+</div> <!-- End East Coast container -->
+
+<!-- West Coast-Jurong West GRC -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">West Coast – Jurong West</h2>
+  <div class="row g-4 text-center">
+
+    <!-- PAP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('West Coast', 'PAP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PAP.svg" alt="PAP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PAP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Desmond_Lee.jpg" class="rounded-circle img-fluid" alt="Desmond Lee">
+            <p>Desmond Lee</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Shawn_Huang.jpg" class="rounded-circle img-fluid" alt="Shawn Huang">
+            <p>Shawn Huang</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Ang_Wei_Neng.jpg" class="rounded-circle img-fluid" alt="Ang Wei Neng">
+            <p>Ang Wei Neng</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Hamid_Razak.jpg" class="rounded-circle img-fluid" alt="Hamid Razak">
+            <p>Hamid Razak</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Cassandra_Lee.jpg" class="rounded-circle img-fluid" alt="Cassandra Lee">
+            <p>Cassandra Lee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PSP Option -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('West Coast', 'PSP', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/party-logos/PSP.svg" alt="PSP" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">PSP</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Leong_Mun_Wai_ST.jpg" class="rounded-circle img-fluid" alt="Leong Mun Wai">
+            <p>Leong Mun Wai</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Tan_Cheng_Bock_20.jpg" class="rounded-circle img-fluid" alt="Tan Cheng Bock">
+            <p>Tan Cheng Bock</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Hazel_Poa_ST.jpg" class="rounded-circle img-fluid" alt="Hazel Poa">
+            <p>Hazel Poa</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Sani_Ismail.jpg" class="rounded-circle img-fluid" alt="Sani Ismail">
+            <p>Sani Ismail</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://www.straitstimes.com/multimedia/graphics/assets/images/2024/sg-ge/candidates/Sumarleki_Amjah.jpg" class="rounded-circle img-fluid" alt="Sumarleki Amjah">
+            <p>Sumarleki Amjah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End West Coast GRC row -->
+</div> <!-- End West Coast container -->
+
+<!-- Singapore Scam GRC -->
+<div class="container py-5">
+  <h2 class="text-center mb-5">Singapore Scam GRC </h2>
+
+  <div class="row g-4 text-center">
+
+    <!-- Salakau (369) Party -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Singapore Scam', 'Salakau (369)', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://singaporescammer.github.io/sgalert/assets/salakau.png" alt="Salakau" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">Salakau (369)</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/alan.png" class="rounded-circle img-fluid" alt="Alan">
+            <p>Alan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/jeffrey.png" class="rounded-circle img-fluid" alt="Jeffrey">
+            <p>Jeffrey</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/dennis.png" class="rounded-circle img-fluid" alt="Dennis">
+            <p>Dennis</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/tankokliang.png" class="rounded-circle img-fluid" alt="Tan Kok Liang">
+            <p>Tan Kok Liang</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/irwinlau.png" class="rounded-circle img-fluid" alt="Irwin Lau">
+            <p>Irwin Lau</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hai Lok Shan (108) Party -->
+    <div class="col-12">
+      <div class="card selectable-card p-3" onclick="selectParty('Singapore Scam', 'Hai Lok Shan (108)', this)">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://singaporescammer.github.io/sgalert/assets/hailokshan.png" alt="Hai Lok Shan" style="height:40px;margin-right:10px;">
+          <h4 class="mb-0">Hai Lok Shan (108)</h4>
+        </div>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/shinegoh.png" class="rounded-circle img-fluid" alt="Shine Goh">
+            <p>Shine Goh</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/alventan.png" class="rounded-circle img-fluid" alt="Alven Tan">
+            <p>Alven Tan</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/jasonsee.png" class="rounded-circle img-fluid" alt="Jason See">
+            <p>Jason See</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/ngcherteck.png" class="rounded-circle img-fluid" alt="Ng Cher Teck">
+            <p>Ng Cher Teck</p>
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <img src="https://singaporescammer.github.io/sgalert/assets/ninhari.png" class="rounded-circle img-fluid" alt="Ninhari">
+            <p>Ninhari</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End Singapore Scam row -->
+</div> <!-- End Singapore Scam container -->
+
+<!-- Place Bet Button -->
+<div class="text-center mt-5">
+  <button id="placeBetBtn" class="btn" disabled style="
+    background: linear-gradient(90deg, #28a745, #6f42c1);
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #6f42c1;
+    transition: 0.3s ease;
+    color: white;
+  " onclick="placeBet()">Place Bet</button>
+</div>
+
+<!-- Footer -->
+<footer class="mt-5">
+  <div class="text-center p-4" style="background-color: #f8f9fa;">
+    &copy; 2025 Singapore Election Tracker. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- Scripts -->
+<script>
+let selectedGRC = "";
+let selectedParty = "";
+
+function selectParty(grc, party, cardElement) {
+  selectedGRC = grc;
+  selectedParty = party;
+  
+  document.querySelectorAll('.selectable-card').forEach(card => {
+    card.classList.remove('border-success', 'bg-success', 'text-white');
+  });
+
+  cardElement.classList.add('border-success', 'bg-success', 'text-white');
+  document.getElementById('placeBetBtn').disabled = false;
+}
+
+function placeBet() {
+  if (selectedGRC && selectedParty) {
+    alert('Placing your bet... Redirecting!');
+    window.location.href = `https://singaporescammer.github.io/sgalert/ge2025-vote.html?grc=${encodeURIComponent(selectedGRC)}&party=${encodeURIComponent(selectedParty)}`;
+  } else {
+    alert('Please select a party before proceeding.');
+  }
+}
+</script>
+
+</body>
+</html>

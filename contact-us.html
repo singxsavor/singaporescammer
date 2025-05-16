@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+
+
+    html, body {
+
+      width: 100%;
+
+      height: 100%;
+
+      background-color: #000;
+
+      color: #fff;
+
+    }
+
+
+
+    body {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 10px;
+
+    }
+
+
+
+    a {
+
+      color: #ff1a1a;
+
+      text-decoration: underline;
+
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+
+    }
+
+
+
+    a:hover {
+
+      color: #ff4d4d;
+
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+
+    }
+
+
+
+    .form-container {
+
+      width: 100%;
+
+      max-width: 780px;
+
+      height: 100%;
+
+      background: #0d0d0d;
+
+      padding: 25px 18px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
+
+      border: 2px solid rgba(255, 0, 0, 0.9);
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .form-content {
+
+      flex: 1;
+
+      overflow-y: auto;
+
+      padding-right: 5px;
+
+    }
+
+
+
+    h1 {
+
+      font-size: 26px;
+
+      color: #ff1a1a;
+
+      text-align: center;
+
+      margin-bottom: 18px;
+
+      text-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .logo-container {
+
+      text-align: center;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .logo-container img {
+
+      max-width: 120px;
+
+      height: auto;
+
+      border-radius: 8px;
+
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+
+      transition: transform 0.3s ease-in-out;
+
+    }
+
+
+
+    .logo-container img:hover {
+
+      transform: scale(1.06);
+
+    }
+
+
+
+    label {
+
+      font-weight: 600;
+
+      margin-bottom: 6px;
+
+      display: block;
+
+      font-size: 15px;
+
+    }
+
+
+
+    input, textarea, select {
+
+      width: 100%;
+
+      padding: 12px 14px;
+
+      margin-bottom: 16px;
+
+      border-radius: 6px;
+
+      border: 1px solid rgba(255, 0, 0, 0.75);
+
+      background: rgba(25, 25, 25, 0.95);
+
+      color: #fff;
+
+      font-size: 15px;
+
+      transition: border 0.3s, box-shadow 0.3s;
+
+    }
+
+
+
+    input:focus, textarea:focus, select:focus {
+
+      border-color: #ff3333;
+
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+
+    }
+
+
+
+    input[type="file"] {
+
+      padding: 10px;
+
+      background: rgba(40, 40, 40, 0.9);
+
+      color: #fff;
+
+      cursor: pointer;
+
+    }
+
+
+
+    input[type="file"]::file-selector-button {
+
+      background: #ff1a1a;
+
+      color: #fff;
+
+      border: none;
+
+      border-radius: 4px;
+
+      padding: 8px 12px;
+
+      margin-right: 10px;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    input[type="file"]::file-selector-button:hover {
+
+      background: #ff4d4d;
+
+    }
+
+
+
+    .checkbox-label {
+
+      font-size: 14px;
+
+      margin-bottom: 12px;
+
+      display: block;
+
+    }
+
+
+
+    .submit-btn {
+
+      width: 100%;
+
+      padding: 14px;
+
+      font-size: 16px;
+
+      background-color: #ff1a1a;
+
+      color: #ffffff;
+
+      font-weight: bold;
+
+      border: none;
+
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+
+
+    .submit-btn:hover {
+
+      background-color: #ff4d4d;
+
+      transform: scale(1.05);
+
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .form-container {
+
+        max-width: 95%;
+
+        padding: 20px 15px;
+
+      }
+
+
+
+      h1 {
+
+        font-size: 22px;
+
+      }
+
+    }
+
+
+
+    @media (max-width: 480px) {
+
+      .form-container {
+
+        max-width: 100%;
+
+        padding: 18px 12px;
+
+      }
+
+
+
+      h1 {
+
+        font-size: 20px;
+
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+<div class="form-container">
+<div class="form-content">
+<h1>Contact Us</h1>
+<div class="logo-container">
+<img alt="Singapore Scammer Logo" src="https://www.singaporescammer.site/assets/scamlogo.png"/>
+</div>
+<form action="https://formsubmit.co/endgameis21@hotmail.com" enctype="multipart/form-data" method="POST">
+<input name="_next" type="hidden" value="https://www.singaporescammer.site/"/>
+<input name="_autoresponse" type="hidden" value="Thank you for contacting Singapore Authentic Scam Review. We’ve received your message and will review it shortly."/>
+<input name="_honey" style="display:none" type="text"/>
+<input name="_captcha" type="hidden" value="false"/>
+<label for="name">Full Name*</label>
+<input id="name" name="name" required="" type="text"/>
+<label for="email">Email Address*</label>
+<input id="email" name="email" required="" type="email"/>
+<label for="phone">Phone Number (Optional)</label>
+<input id="phone" name="phone" type="text"/>
+<label for="telegram">Telegram Username (Optional)</label>
+<input id="telegram" name="telegram" type="text"/>
+<label for="contact_method">Preferred Contact Method</label>
+<select id="contact_method" name="contact_method">
+<option value="email">Email</option>
+<option value="telegram">Telegram</option>
+</select>
+<label for="category">Category*</label>
+<select id="category" name="category" required="">
+<option value="">-- Select --</option>
+<option value="report_scam">Report a Scam</option>
+<option value="verified_enquiry">Verified Seller Enquiry</option>
+<option value="feedback">Feedback / Suggestions</option>
+<option value="partnership">Business Partnership / Collaboration</option>
+<option value="media">Media / Press Enquiry</option>
+<option value="other">Other</option>
+</select>
+<label for="subject">Subject / Topic*</label>
+<input id="subject" name="subject" required="" type="text"/>
+<label for="message">Message / Description*</label>
+<textarea id="message" name="message" required="" rows="6"></textarea>
+<label for="attachment">Attachment (Optional)</label>
+<input id="attachment" name="attachment" type="file"/>
+<label class="checkbox-label">
+<input name="authenticity" required="" type="checkbox"/>
+
+    By submitting this form, I acknowledge that my submission is true and authentic, and I have agreed to the
+
+    <a href="https://www.singaporescammer.site/terms-of-service.html" target="_blank">Terms of Service</a>.
+
+  </label>
+<button class="submit-btn" type="submit">Submit</button>
+</form>
+</div>
+</div>
+</body>
+</html>

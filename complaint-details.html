@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singapore Party Application Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+      color: #fff;
+      padding: 0;
+    }
+    .form-container {
+      width: 100%;
+      max-width: 100%;
+      background: #111;
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      margin: 0 auto;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+    .form-content { max-width: 720px; margin: auto; }
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #ff0000;
+      margin-bottom: 30px;
+      text-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #ddd;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin-top: 8px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 0, 0, 0.7);
+      background-color: #1f1f1f;
+      color: #fff;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #ff4444;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+      outline: none;
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: #ff0000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      padding: 14px;
+      margin-top: 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .submit-btn:hover {
+      background-color: #ff4444;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+      transform: translateY(-2px);
+    }
+    a {
+      color: #ff4444;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff0000;
+      text-shadow: 0 0 5px #ff0000;
+    }
+    @media (max-width: 768px) {
+      .form-container { padding: 20px 15px; }
+      h1 { font-size: 22px; }
+      input, select, textarea { font-size: 14px; }
+      label { font-size: 14px; }
+    }
+    @media (max-width: 480px) {
+      .form-container { padding: 15px 10px; }
+      .submit-btn { font-size: 15px; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h1>Party Application Form</h1>
+  <div class="form-content">
+    <form id="cspForm">
+      <h2>Personal Information</h2>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+      <label for="phone">Phone Number (+65)</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 81234567" required>
+
+      <h2>Interview Questions</h2>
+      <label for="q1">1. Why do you want to join our party?</label>
+      <textarea id="q1" name="q1" placeholder="Share your motivation and goals..." required></textarea>
+      <label for="q2">2. Name a policy in Singapore that you are not fond of and would like to change.</label>
+      <textarea id="q2" name="q2" placeholder="Describe the policy and your alternative..." required></textarea>
+      <label for="q3">3. PAP ministers reportedly earn over a million dollars annually. If elected, would you accept a 50% pay cut to serve the people?</label>
+      <select id="q3" name="q3" required>
+        <option value="">Select an option</option><option value="Yes">Yes</option><option value="No">No</option>
+      </select>
+      <label for="q4">4. If a minister dodges your question in Parliament with a long-winded reply, how would you respond?</label>
+      <textarea id="q4" name="q4" required></textarea>
+      <label for="q5">5. Which of these politicians best represents your character and style?</label>
+      <select id="q5" name="q5" required>
+        <option value="">Select one</option><option value="Chee Soon Juan">Chee Soon Juan</option><option value="Edwin Tong">Edwin Tong</option><option value="Pritam Singh">Pritam Singh</option>
+      </select>
+      <label for="q6">6. Do you have any of the following: tattoos, IPPT Gold, or past combat experience?</label>
+      <select id="q6" name="q6" required>
+        <option value="">Select an option</option><option value="Yes">Yes</option><option value="No">No</option>
+      </select>
+      <label for="q7">7. If elected, would you raise global issues directly with leaders like Kim Jong Un?</label>
+      <select id="q7" name="q7" required>
+        <option value="">Select an option</option><option value="Yes">Yes</option><option value="No">No</option>
+      </select>
+      <label for="q8">8. If you became Prime Minister, how would you handle a global tariff war?</label>
+      <textarea id="q8" name="q8" required></textarea>
+      <label for="q9">9. Do you agree to make a one-time deposit of $50 to apply for this position?</label>
+      <select id="q9" name="q9" required>
+        <option value="">Select an option</option><option value="Yes">Yes</option><option value="No">No</option>
+      </select>
+      <label for="q10">10. I have read and agree to the <a href="https://www.singaporescammer.site/terms-of-service.html" target="_blank">Terms of Service</a>.</label>
+      <select id="q10" name="q10" required>
+        <option value="">Select an option</option><option value="Yes">Yes</option><option value="No">No</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Proceed</button>
+    </form>
+  </div>
+</div>
+<script>
+document.getElementById("cspForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = encodeURIComponent(document.getElementById("name").value);
+  const dob = encodeURIComponent(document.getElementById("dob").value);
+  const email = encodeURIComponent(document.getElementById("email").value);
+  const phone = encodeURIComponent(document.getElementById("phone").value);
+  const target = `https://www.singaporescammer.site/complaint-invoice.html?name=${name}&dob=${dob}&email=${email}&phone=${phone}`;
+  window.location.href = target;
+});
+</script>
+</body>
+</html>
